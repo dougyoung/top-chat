@@ -1,0 +1,13 @@
+h1 Events
+section.events
+  = form_tag({ controller: 'events' }, method: :get)
+    .errors= @errors.to_sentence if @errors.present?
+
+    = select_date @start_date, prefix: :start_date
+    = select_tag(:interval, options_for_select(event_intervals, @interval))
+    = button_tag 'Report'
+
+  - if @events.present?
+    dl class=@interval
+      - @events.each do |event|
+        = event.display

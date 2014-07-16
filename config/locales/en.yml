@@ -1,0 +1,29 @@
+en:
+  event:
+    action:
+      enter-the-room: '%{sender} enters the room'
+      leave-the-room: '%{sender} leaves'
+      high-five-another-user: '%{sender} high-fives %{receiver}'
+      comment: '%{sender} comments: "%{content}"'
+    report:
+      enter-the-room:
+        one: '%{count} person entered'
+        other: '%{count} people entered'
+      leave-the-room:
+        one: '%{count} person left'
+        other: '%{count} people left'
+      high-five-another-user:
+        one: '%{count} person high-fived %{receivers} other person'
+        other: '%{count} people high-fived %{receivers} other people'
+      comment:
+        one: '%{count} comment'
+        other: '%{count} comments'
+  events:
+    index:
+      timestamp: '%{time}:'
+  time:
+    formats:
+      hour: '%l%P'
+      hour_minute: '%-I:%M%p'
+  errors:
+    invalid: 'Invalid %{key} "%{value}"'
